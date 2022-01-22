@@ -8,12 +8,30 @@
 </script>
 
 <BaseLayout>
-    <p>this is the home page</p>
-    Check the <Link to="/about"><span class="link">about page</span></Link>
-  
+  <section>
+    <pre>
+        .developer&nbsp;&#123;
+        work: front-end;
+&#125;
+      </pre>
+    <p>
+      &#10092;p&#10093;..with ability to communicate with cross-functional
+      teams, proficient with version control systems like git to enable steady
+      and smooth workflow.&#10092;/p&#10093;
+    </p>
+  </section>
 </BaseLayout>
 
 <style lang="scss">
-    @use "../assets/sass/main.scss" as *;
-  
+  @use "../assets/sass/main.scss" as *;
+
+  section {
+    width: 20rem;
+
+    pre {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+  }
 </style>
