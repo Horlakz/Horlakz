@@ -1,0 +1,13 @@
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Lobster&display=swap');
+
+// variables
+$blue-color: #497cff;
+$purple-color2: #7226ff;
+$purple-color: #B07AE9;
+$aqua-color: #1ddef4;
+
+// extends 
+.default-transition {
+    transition: 0.4s ease-in-out;
+}
