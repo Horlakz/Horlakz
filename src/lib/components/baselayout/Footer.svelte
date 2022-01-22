@@ -1,8 +1,11 @@
 <footer>
   <p>
-    <span>Github</span>&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;<span
-      >Email</span
-    >&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;<span>Twitter</span>
+    <a href="https://github.com/horlakz">Github</a
+    >&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;<a
+      href="mailto:horlakz@protonmail.com">Email</a
+    >&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;<a
+      href="https://twitter.com/horlakzz">Twitter</a
+    >
   </p>
 </footer>
 
@@ -13,8 +16,8 @@
     position: absolute;
     bottom: 0;
     padding: 2rem;
-    
-    span {
+
+    a {
       text-decoration: underline;
       font-size: 0.8rem;
     }

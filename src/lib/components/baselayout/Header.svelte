@@ -1,9 +1,11 @@
 <script lang="ts">
   import { Link } from "svelte-routing";
+  import logo from "../../../assets/images/H.png";
+
 </script>
 
 <header>
-  <h1>Horlakz</h1>
+  <img src={logo} alt="logo">
   <nav>
     <ul>
       <li><Link to="/">Home</Link></li>
@@ -11,21 +13,26 @@
       <li><Link to="/works">Works</Link></li>
       <li><Link to="/contact">Contact</Link></li>
     </ul>
-    <span>another</span>
+    <span>an</span>
   </nav>
 </header>
 
 <style lang="scss">
   @use "../../../assets/sass/main.scss" as *;
 
+  .active {
+    font-weight: 800;
+    color: black;
+  }
+
   header {
     display: flex;
     place-content: space-between;
     place-items: center;
 
-    h1 {
-      font-weight: 600;
-      font-size: 1.5rem;
+    img {
+      height: 3.25rem;
+      margin-left: 3rem;
     }
 
     ul {
@@ -49,6 +56,14 @@
           text-transform: uppercase;
           padding: 0 0.7rem;
           font-size: 0.8rem;
+
+          &::before {
+            content: '';
+            background: blue;
+            width: 1rem;
+            height: 1rem;
+            color: blue;
+          }
         }
       }
 
