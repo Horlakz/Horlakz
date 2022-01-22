@@ -5,16 +5,29 @@
 
 <BaseLayout>
   <main>
-    <h1>this is the about page</h1>
-    <p>Go back <Link to="/"><span class="link">home</span></Link></p>
+    <p>
+      FrontEnd Developer with ability to communicate with cross-functional
+      teams, proficient with version control systems like git to enable steady
+      and smooth workflow. Seeking to use my creative ideas and analytical skills
+      to avoid wasting materials and time, also to produce desired results for
+      the system.
+    </p>
   </main>
 </BaseLayout>
 
-
 <style lang="scss">
-    @use "../assets/sass/main.scss" as *;
+  @use "../assets/sass/main.scss" as *;
+  @import url("https://fonts.googleapis.com/css2?family=ABeeZee&display=swap");
 
-    main {
-        color: white;
+  main {
+    color: white;
+
+    p {
+      font-size: 1.56rem;
+      font-family: "ABeeZee", sans-serif;
+      // font-weight: 800;
+      margin-bottom: 1rem;
+      width: 25rem;
     }
+  }
 </style>
