@@ -1,57 +1,66 @@
 @import "utilities";
 
 :global(*, *::before, *::after) {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-size: 1rem;
-    text-decoration: none;
-    font-weight: normal;
-    font-family: 'Lato', sans-serif;
-    list-style: none;
-    color: black;
-
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: normal;
+  font-family: "Lato", sans-serif;
+  list-style: none;
+  color: black;
 }
 
 :global(.link) {
-    color: black;
-    @extend .default-transition !optional;
+  color: black;
+  @extend .default-transition !optional;
 
-    &:hover, &:focus, &:active {
-        color: rgb(30, 30, 201);
-    }
+  &:hover,
+  &:focus,
+  &:active {
+    color: rgb(30, 30, 201);
+  }
 }
 
 :global(.container) {
-    max-width: 100%;
+  max-width: 100%;
+}
+
+:global(.hide) {
+  opacity: 0;
+}
+
+:global(.show) {
+  opacity: 1;
 }
 
 @media (min-width: 640px) {
-    :global(.container) {
-        max-width: 640px;
-    }
+  :global(.container) {
+    max-width: 640px;
+  }
 }
 
 @media (min-width: 768px) {
-    :global(.container) {
-        max-width: 768px;
-    }
+  :global(.container) {
+    max-width: 768px;
+  }
 }
 
 @media (min-width: 1024px) {
-    :global(.container) {
-        max-width: 1024px;
-    }
+  :global(.container) {
+    max-width: 1024px;
+  }
 }
 
 @media (min-width: 1280px) {
-    :global(.container) {
-        max-width: 1280px;
-    }
+  :global(.container) {
+    max-width: 1280px;
+  }
 }
 
 @media (min-width: 1536px) {
-    :global(.container) {
-        max-width: 1536px;
-    }
+  :global(.container) {
+    max-width: 1536px;
+  }
 }

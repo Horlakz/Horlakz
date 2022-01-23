@@ -1,52 +1,92 @@
+<!-- script  -->
 <script lang="ts">
+  // file imports and images
   import Header from "../components/baselayout/Header.svelte";
   import Footer from "../components/baselayout/Footer.svelte";
+  import horlakzLogo from "../../assets/images/H.png";
 
-  import displayImg from "../../assets/images/44.1.png";
-  import logo from "../../assets/images/H.png";
+  // props
+  export let logo: string = horlakzLogo;
+  export let showLogo: string = "show";
+
+  // variables
+  let animate;
+
+  //functions
+  if (logo === horlakzLogo) {
+    animate = "animate";
+  }
 </script>
 
+<!-- website head -->
 <svelte:head>
+  <!-- meta content -->
+  <meta name="title" content="Horlakz" />
+  <meta name="author" content="Horlakz, horlakz@protonmail.com" />
+  <meta
+    name="description"
+    content="Hi, I am Horlakz. Welcome to my Portfolio Website"
+  />
+  <meta
+    name="keywords"
+    content="Horlakz, profile card of horlakz, portfolio website of horlakz, portfolio website ,profile card"
+  />
+  <meta property="og:title" content="Horlakz" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:url" content="https://horlakz.github.io/" />
+  <meta
+    property="og:description"
+    content="Hi, I am Horlakz. Welcome to my Website"
+  />
+  <meta property="og:site_name" content="Horlakz" />
+  <meta property="og:locale" content="en_NG" />
+  <meta name="twitter:site" content="@horlakzz" />
+  <meta name="twitter:creator" content="@horlakzz" />
+
+  <!-- others -->
   <link rel="icon" href={logo} />
   <title>Horlakz</title>
 </svelte:head>
 
+<!-- main content  -->
 <main>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"
-><path
-fill="#273036"
-fill-opacity="1"
-d="M0,64L48,80C96,96,192,128,288,122.7C384,117,480,75,576,85.3C672,96,768,160,864,170.7C960,181,1056,139,1152,117.3C1248,96,1344,96,1392,96L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
-/></svg>
   <div>
-    <Header />
+    <Header {showLogo} />
     <section class="container">
       <aside>
         <slot />
       </aside>
       <!-- svelte-ignore a11y-img-redundant-alt -->
-      <img src={displayImg} alt="Display Image" />
+      <img src={logo} alt="Display Image" class={animate} />
     </section>
     <Footer />
   </div>
 </main>
 
+<!-- style -->
 <style lang="scss">
   @use "../../assets/sass/main.scss" as *;
 
+  $page-padding: 3.5rem;
+
   main {
     padding: 1.52rem;
-    background: linear-gradient(45deg, rgb(243, 243, 243), rgb(228, 223, 223), rgb(167, 165, 165));
+    background: linear-gradient(
+      45deg,
+      rgb(243, 243, 243),
+      rgb(228, 223, 223),
+      rgb(167, 165, 165)
+    );
+  }
+
+  img {
+    display: none;
   }
 
   @media (min-width: 468px) {
     main {
-      padding: 3.5rem;
+      padding: $page-padding;
       height: 100vh;
-
-      svg {
-        display: none;
-      }
 
       div {
         border: 2px solid black;
@@ -59,19 +99,37 @@ d="M0,64L48,80C96,96,192,128,288,122.7C384,117,480,75,576,85.3C672,96,768,160,86
         section {
           display: flex;
           place-content: space-evenly;
+          flex-direction: row-reverse;
           place-items: center;
           margin-top: 2.5rem;
 
           img {
-            // opacity: 0;
-            // width: 13rem;
             height: 20rem;
-            // border-radius: 100%;
-            // border: 2px solid black;
-            // filter: saturate(0);
+            width: inherit;
+            display: flex;
+            background: transparent;
+          }
+
+          .animate {
+            height: 3.5rem;
+            transform: translate(-12rem, -12rem);
+            animation: logoAnimate 1.5s ease-in forwards;
           }
         }
       }
+    }
+  }
+
+  @keyframes logoAnimate {
+    50% {
+      transform: translate(-12rem, -12rem);
+      height: 3.25rem;
+    }
+
+    100% {
+      width: initial;
+      height: 20rem;
+      transform: translate(0, 0);
     }
   }
 </style>

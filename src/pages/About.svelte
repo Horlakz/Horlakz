@@ -1,9 +1,12 @@
+<!-- script -->
 <script>
   import { Link } from "svelte-routing";
   import BaseLayout from "../lib/layouts/BaseLayout.svelte";
+  import aboutPics from '../assets/images/44.1.png'
 </script>
 
-<BaseLayout>
+<!-- main content -->
+<BaseLayout logo={aboutPics} >
   <main>
     <p>
       FrontEnd Developer with ability to communicate with cross-functional
@@ -15,6 +18,7 @@
   </main>
 </BaseLayout>
 
+<!-- styles -->
 <style lang="scss">
   @use "../assets/sass/main.scss" as *;
   @import url("https://fonts.googleapis.com/css2?family=ABeeZee&display=swap");
@@ -23,7 +27,7 @@
     color: white;
 
     p {
-      font-size: 1.56rem;
+      font-size: 1.24rem;
       font-family: "ABeeZee", sans-serif;
       // font-weight: 800;
       margin-bottom: 1rem;

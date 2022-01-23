@@ -1,10 +1,15 @@
 <footer>
   <p>
-    <a href="https://github.com/horlakz">Github</a
+    <a href="https://github.com/horlakz" title="@horlakz" target="_blank"
+      >Github</a
     >&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;<a
-      href="mailto:horlakz@protonmail.com">Email</a
+      href="mailto:horlakz@protonmail.com"
+      title="horlakz@protonmail.com"
+      target="_blank">Email</a
     >&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;<a
-      href="https://twitter.com/horlakzz">Twitter</a
+      href="https://twitter.com/horlakzz"
+      title="@horlakzz"
+      target="_blank">Twitter</a
     >
   </p>
 </footer>

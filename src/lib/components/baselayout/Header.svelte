@@ -1,11 +1,15 @@
+<!-- script -->
 <script lang="ts">
   import { Link } from "svelte-routing";
   import logo from "../../../assets/images/H.png";
 
+ export let showLogo: string = "showLogo";
+
 </script>
 
+<!-- main content -->
 <header>
-  <img src={logo} alt="logo">
+  <img src={logo} alt="logo" class={showLogo}>
   <nav>
     <ul>
       <li><Link to="/">Home</Link></li>
@@ -17,6 +21,7 @@
   </nav>
 </header>
 
+<!-- styles -->
 <style lang="scss">
   @use "../../../assets/sass/main.scss" as *;
 
