@@ -35,6 +35,10 @@
   opacity: 1;
 }
 
+:global(.display-none)  {
+  display: none;
+}
+
 @media (min-width: 640px) {
   :global(.container) {
     max-width: 640px;
