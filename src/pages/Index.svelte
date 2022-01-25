@@ -8,10 +8,14 @@
   import { Link } from "svelte-routing";
   import BaseLayout from "../lib/layouts/BaseLayout.svelte";
   import ChevronRight from "../assets/icons/chevron-right.svg";
-  import PageNav, {showNav, hideNav} from '../lib/components/other/PageNav.svelte';
-</script>
+  import PageNav, {showNav} from '../lib/components/other/PageNav.svelte';
 
-<svelte:window on:click={hideNav} />
+  // let showPageNav: string = "show-page-nav"
+
+  // function showNav() {
+  //       showPageNav = 'show-page-nav'
+  //   }
+</script>
 
 <!-- main content -->
 
@@ -34,7 +38,7 @@
       <img src={ChevronRight} alt="chevron right" />
     </button>
   </section>
-  <PageNav />
+  <PageNav on:click={showNav} />
 </BaseLayout>
 
 <!-- styles -->
