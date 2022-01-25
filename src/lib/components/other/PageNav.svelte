@@ -1,22 +1,30 @@
 
 
-<script lang="ts" context="module">
-    let showPageNav: string 
-    
-    export function showNav() {
-        showPageNav = 'show-page-nav'
-    }
-    
-    export function hideNav() {
+<script lang="ts">
+    export let showPageNav: string 
+
+    function hideNav() {
         showPageNav = 'hide-page-nav'
     }
 </script>
 
-<ul class="hide-page-nav">
+<script lang="ts" context="module">
+  let showPageNav: string
+  
+  export function showNav() {
+    showPageNav = 'show-page-nav'
+  }
+</script>
+
+<svelte:window on:click={hideNav} />
+
+<ul class={showPageNav}>
   <li>My Profile</li>
   <li>About</li>
   <li>Works</li>
   <li>Contact</li>
+
+  <button class="display-none" on:click>button</button>
 </ul>
 
 <style lang="scss">
@@ -33,7 +41,6 @@
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 5;
     border-top-right-radius: 2rem;
     border-bottom-right-radius: 2rem;
 
@@ -54,10 +61,12 @@
 
 .show-page-nav {
     opacity: 1;
+    z-index: 2;
 }
 
 .hide-page-nav {
     opacity: 0;
+    z-index: -1;
 }
 
 </style>
