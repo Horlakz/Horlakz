@@ -6,14 +6,14 @@
   import horlakzLogo from "../../assets/images/H.png";
 
   // props
-  export let logo: string = horlakzLogo;
+  export let pglogo: string = horlakzLogo;
   export let showLogo: string = "show";
 
   // variables
   let animate;
 
   //functions
-  if (logo === horlakzLogo) {
+  if (pglogo === horlakzLogo) {
     animate = "animate";
   }
 </script>
@@ -44,7 +44,7 @@
   <meta name="twitter:creator" content="@horlakzz" />
 
   <!-- others -->
-  <link rel="icon" href={logo} />
+  <link rel="icon" href={horlakzLogo} />
   <title>Horlakz</title>
 </svelte:head>
 
@@ -57,7 +57,7 @@
         <slot />
       </aside>
       <!-- svelte-ignore a11y-img-redundant-alt -->
-      <img src={logo} alt="Display Image" class={animate} />
+      <img src={pglogo} alt="Display Image" class={animate} />
     </section>
     <Footer />
   </div>
@@ -101,13 +101,22 @@
           place-content: space-evenly;
           flex-direction: row-reverse;
           place-items: center;
-          margin-top: 2.5rem;
-
+          margin-top: 1.5rem;
+          max-height: inherit;
+          // overflow-y: scroll;
+          
           img {
-            height: 20rem;
+            max-height: 20rem;
             width: inherit;
             display: flex;
             background: transparent;
+            overflow-y: none;
+            z-index: 5;
+          }
+
+          aside {
+            max-height: inherit;
+            overflow-y: scroll;
           }
 
           .animate {
