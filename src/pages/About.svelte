@@ -2,11 +2,11 @@
 <script>
   import { Link } from "svelte-routing";
   import BaseLayout from "../lib/layouts/BaseLayout.svelte";
-  import aboutPics from '../assets/images/44.1.png'
+  import aboutPics from '../assets/images/display-img.jpg'
 </script>
 
 <!-- main content -->
-<BaseLayout logo={aboutPics} >
+<BaseLayout pglogo={aboutPics} >
   <main>
     <p>
       FrontEnd Developer with ability to communicate with cross-functional
