@@ -8,13 +8,14 @@
   import { Link } from "svelte-routing";
   import BaseLayout from "../lib/layouts/BaseLayout.svelte";
   import ChevronRight from "../assets/icons/chevron-right.svg";
-  import PageNav, {showNav} from '../lib/components/other/PageNav.svelte';
+  import PageNav from "../lib/components/other/PageNav.svelte";
 
-  // let showPageNav: string = "show-page-nav"
+  let showNav: boolean = false
 
-  // function showNav() {
-  //       showPageNav = 'show-page-nav'
-  //   }
+  // function showNav() {;
+  //   showPageNav= true;
+  // }
+  
 </script>
 
 <!-- main content -->
@@ -31,14 +32,14 @@
       teams, proficient with version control systems like git to enable steady
       and smooth workflow.&#10092;/p&#10093;
     </p>
-    <button on:click={showNav}>
+    <button on:click={() => showNav = !showNav}>
       Explore Me
       <img src={ChevronRight} alt="chevron right" />
       <img src={ChevronRight} alt="chevron right" />
       <img src={ChevronRight} alt="chevron right" />
     </button>
   </section>
-  <PageNav on:click={showNav} />
+  <PageNav {showNav} />
 </BaseLayout>
 
 <!-- styles -->
@@ -63,7 +64,7 @@
       transition: 0.4s ease-in-out;
       display: flex;
       place-items: center;
-      animation: proceed-btn .5s ease-in forwards;
+      animation: proceed-btn 0.5s ease-in forwards;
       transition: 0.5s ease-in-out;
       cursor: pointer;
 
@@ -72,7 +73,7 @@
 
         img {
           // opacity: 0;
-          animation: proceed .5s ease-in forwards;
+          animation: proceed 0.5s ease-in forwards;
         }
       }
 
@@ -83,9 +84,7 @@
     }
   }
 
-
   @keyframes proceed {
-
     100% {
       transform: translateX(0);
       opacity: 1;
