@@ -9,6 +9,7 @@
   import BaseLayout from "../lib/layouts/BaseLayout.svelte";
   import ChevronRight from "../assets/icons/chevron-right.svg";
   import PageNav from "../lib/components/other/PageNav.svelte";
+import type { HtmlTag } from "svelte/internal";
 
   let showNav: boolean = false
 
@@ -32,8 +33,8 @@
       teams, proficient with version control systems like git to enable steady
       and smooth workflow.&#10092;/p&#10093;
     </p>
-    <button on:click={() => showNav = !showNav}>
-      Explore Me
+    <button on:click={() => showNav = !showNav} class:move-toggle-button={showNav}>
+      {showNav ? "X" : "Explore Me"}
       <img src={ChevronRight} alt="chevron right" />
       <img src={ChevronRight} alt="chevron right" />
       <img src={ChevronRight} alt="chevron right" />
@@ -82,6 +83,19 @@
         opacity: 0;
       }
     }
+  }
+
+  .move-toggle-button {
+    position: absolute;
+    animation: move-btn 0.6s ease-in forwards;
+    z-index: 10;
+  }
+
+  @keyframes move-btn {
+   to {
+    // top: 13rem;
+    transform: translate(-16rem, -8rem);
+   }
   }
 
   @keyframes proceed {
