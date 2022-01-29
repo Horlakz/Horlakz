@@ -1,11 +1,13 @@
 
 <script lang="ts">
-  export let showNav
-  let showPageNav : string ;
+  import { Link } from "svelte-routing";
 
-  function hideNav() {
-    showPageNav = "hide-page-nav"
-  }
+  export let showNav
+  // let showPageNav : string ;
+
+  // function hideNav() {
+  //   showPageNav = "hide-page-nav"
+  // }
 
 
   // function showNav() {
@@ -13,14 +15,12 @@
   // }
 </script>
 
-<svelte:window on:click={hideNav} />
-
 {#if showNav}
 <ul class:show-page-nav={showNav}>
   <li>My Profile</li>
-  <li>About</li>
-  <li>Works</li>
-  <li>Contact</li>
+  <li><Link to="/about">About</Link></li>
+  <li><Link to="/works">Works</Link></li>
+  <li><Link to="/contact">Contact</Link></li>
 </ul>
 {/if}
 
