@@ -8,6 +8,6 @@ services:
         dockerfile: Dockerfile
       volumes:
         - .:/app
-      command: pm2 serve dist/ 8001 --name 'horlakz' --spa --no-daemon
+      command: pm2 serve dist/ 8000 --name 'horlakz' --spa --no-daemon
       ports:
-        - "8001:8001"
+        - "`1001:8000"
