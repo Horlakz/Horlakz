@@ -21,7 +21,7 @@
     place-items: center;
     p {
       font-size: 1rem;
-    }
+    } 
 }
 
 @media (min-width: 640px) {
