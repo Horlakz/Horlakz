@@ -5,8 +5,6 @@ services:
       build:
         context: .
         dockerfile: Dockerfile
-      # volumes:
-      #   - .:/app
       command: pm2 serve dist/ 8000 --name 'horlakz' --spa --no-daemon
       ports:
         - "8001:8000"

@@ -29,13 +29,17 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - && \
     sudo apt update && \
     sudo apt install -y yarn
 
+RUN mkdir /home/horlakz/.node-modules
+RUN npm config set prefix /home/horlakz/.node-modules
+
+
 # install pm2
 
-RUN yarn global add pm2
+RUN sudo yarn global add pm2
 
 # setup svelte and all
 
-RUN chown -R horlakz:horlakz .
+RUN sudo chown -R horlakz:horlakz .
 
 COPY --chown=horlakz:horlakz package.json package.json
 COPY --chown=horlakz:horlakz . ./
