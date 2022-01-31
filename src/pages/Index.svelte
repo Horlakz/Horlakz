@@ -9,7 +9,6 @@
   import BaseLayout from "../lib/layouts/BaseLayout.svelte";
   import ChevronRight from "../assets/icons/chevron-right.svg";
   import PageNav from "../lib/components/other/PageNav.svelte";
-import type { HtmlTag } from "svelte/internal";
 
   let showNav: boolean = false
 

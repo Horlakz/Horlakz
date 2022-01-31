@@ -3,6 +3,7 @@
 <font size="4">  .frontend-developer {</font>
 
         languages-are: HTML, CSS, Sass, JavaScript, TypeScript, React.js, Gatsby.js, Svelte;
+        website: url('horlakz.com');
 
 }
 
