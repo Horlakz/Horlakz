@@ -10,5 +10,5 @@ services:
         - .:/app
       command: pm2 serve dist/ 8000 --name 'horlakz' --spa --no-daemon
       ports:
-        - "`1001:8000"
+        - "8001:8000"
       restart: unless-stopped
