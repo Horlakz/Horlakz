@@ -8,13 +8,17 @@
 
     import Error from '../pages/error/error.svelte';
 
+    import Static from '../pages/Static.svelte';
+
     export let url = '';
 </script>
 
 <Router {url}>
     <Route path="*" component={Error} />
 
-    <Route path="/" component={Index} />
+    <Route path="/" component={Static} />
+
+    <!-- <Route path="/" component={Index} /> -->
     <Route path="/about" component={About} />
     <Route path='/contact' component={Contact} />
     <Route path='/works' component={Works} />
