@@ -13,21 +13,15 @@
 <style lang="scss">
   //   @use "../assets/sass/main.scss" as *;
 
-  .main {
+  main {
     padding: 1rem;
-    background: linear-gradient(
-      45deg,
-      rgb(243, 243, 243),
-      rgb(228, 223, 223),
-      rgb(167, 165, 165)
-    );
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    place-items: center;
+    
     p {
-      font-size: 1rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+      line-height: 1.5;
+      margin: 0;
+      text-align: center;
     } 
   }
 </style>
