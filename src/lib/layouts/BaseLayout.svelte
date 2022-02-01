@@ -78,6 +78,7 @@
       rgb(228, 223, 223),
       rgb(167, 165, 165)
     );
+    height: 100vh;
   }
 
   img {
@@ -87,7 +88,6 @@
   @media (min-width: 468px) {
     main {
       padding: $page-padding;
-      height: 100vh;
       background: linear-gradient(
         135deg,
         rgb(243, 243, 243),
