@@ -54,8 +54,8 @@
       }
       
       ul {
-        // display: flex;
-        display: none;
+        display: flex;
+        // display: none;
         place-content: space-between;
         
         li {
