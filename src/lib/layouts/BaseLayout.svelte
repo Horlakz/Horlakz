@@ -79,10 +79,24 @@
       rgb(167, 165, 165)
     );
     height: 100vh;
-  }
 
+    div {
+
+      section {
+        display: flex;
+        flex-direction: column-reverse;
+        place-items: center;
+      }
+    }
+  }
+  
   img {
-    display: none;
+    max-height: 20rem;
+    width: inherit;
+    display: flex;
+    background: transparent;
+    overflow-y: none;
+    z-index: 5;
   }
 
   @media (min-width: 468px) {
@@ -104,21 +118,13 @@
         background: white;
 
         section {
-          display: flex;
-          place-content: space-evenly;
           flex-direction: row-reverse;
-          place-items: center;
           margin-top: 1.5rem;
           max-height: inherit;
+          place-content: space-evenly;
           // overflow-y: scroll;
-
+          
           img {
-            max-height: 20rem;
-            width: inherit;
-            display: flex;
-            background: transparent;
-            overflow-y: none;
-            z-index: 5;
           }
 
           aside {
