@@ -4,5 +4,5 @@
 </script>
 
 <BaseLayout pglogo={WorkImg}>
-  <main>this is the page for displaying my works</main>
+  <main><p>this is the page for displaying my works</p></main>
 </BaseLayout>
