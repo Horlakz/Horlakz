@@ -1,12 +1,19 @@
-<main>
-  <p>This website is under construction</p>
-  <p>please check back later</p>
-</main>
+<script lang="ts">
+  import BaseLayout from "../lib/layouts/BaseLayout.svelte";
+  import StaticImg from "../assets/images/static-img.png";
+</script>
+
+<BaseLayout pglogo={StaticImg}>
+  <main>
+    <p>This website is under construction</p>
+    <p>please check back later</p>
+  </main>
+</BaseLayout>
 
 <style lang="scss">
   //   @use "../assets/sass/main.scss" as *;
 
-  main {
+  .main {
     padding: 1rem;
     background: linear-gradient(
       45deg,
@@ -22,13 +29,5 @@
     p {
       font-size: 1rem;
     } 
-}
-
-@media (min-width: 640px) {
-    main {
-        p {
-        font-size: 2rem;
-      }
-    }
   }
 </style>
