@@ -16,9 +16,9 @@
 <Router {url}>
     <Route path="*" component={Error} />
 
-    <Route path="/" component={Static} />
+    <!-- <Route path="/" component={Static} /> -->
 
-    <!-- <Route path="/" component={Index} /> -->
+    <Route path="/" component={Index} />
     <Route path="/about" component={About} />
     <Route path='/contact' component={Contact} />
     <Route path='/works' component={Works} />
