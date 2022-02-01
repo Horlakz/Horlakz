@@ -72,8 +72,9 @@
   main {
     padding: 1.52rem;
     background: linear-gradient(
-      45deg,
-      rgb(243, 243, 243),
+      135deg,
+      rgb(253, 253, 253),
+      rgb(253, 253, 253),
       rgb(228, 223, 223),
       rgb(167, 165, 165)
     );
@@ -87,6 +88,12 @@
     main {
       padding: $page-padding;
       height: 100vh;
+      background: linear-gradient(
+        135deg,
+        rgb(243, 243, 243),
+        rgb(228, 223, 223),
+        rgb(167, 165, 165)
+      );
 
       div {
         border: 2px solid black;
@@ -104,7 +111,7 @@
           margin-top: 1.5rem;
           max-height: inherit;
           // overflow-y: scroll;
-          
+
           img {
             max-height: 20rem;
             width: inherit;
