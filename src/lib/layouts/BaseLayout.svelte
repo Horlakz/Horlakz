@@ -99,7 +99,7 @@
     z-index: 5;
   }
 
-  @media (min-width: 468px) {
+  @media (min-width: 560px) {
     main {
       padding: $page-padding;
       background: linear-gradient(
