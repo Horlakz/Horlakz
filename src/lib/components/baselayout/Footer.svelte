@@ -10,7 +10,11 @@
       href="https://twitter.com/horlakzz"
       title="@horlakzz"
       target="_blank">Twitter</a
-    >
+    >&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="https://www.youtube.com/channel/UCgI6MwUoyD5j_2Zc6rx4TBA"
+    title="YT-Horlakz"
+    target="_blank">Youtube</a
+  >
   </p>
 </footer>
 
