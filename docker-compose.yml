@@ -6,6 +6,7 @@ services:
         context: .
         dockerfile: Dockerfile
       command: pm2 serve dist/ 8000 --name 'horlakz' --spa --no-daemon
-      ports:
-        - "8001:8000"
+#       ports:
+#         - "8001:8000"
+      network_mode: host
       restart: unless-stopped
