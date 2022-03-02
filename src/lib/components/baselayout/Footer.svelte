@@ -56,7 +56,7 @@
   footer {
     position: absolute;
     bottom: 0;
-    padding: 2rem;
+    padding: .5rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -65,6 +65,17 @@
       text-decoration: underline;
       font-size: 0.8rem;
       padding: 0 .5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    footer {
+      flex-direction: column;
+      place-items: center;
+
+      section {
+        margin: .2rem 0;
+      }
     }
   }
 </style>
