@@ -1,21 +1,10 @@
-<!-- script  -->
+<!-- script -->
 <script lang="ts">
   // file imports and images
   import Header from "../components/baselayout/Header.svelte";
   import Footer from "../components/baselayout/Footer.svelte";
   import horlakzLogo from "../../assets/images/H.png";
 
-  // props
-  export let pglogo: string = horlakzLogo;
-  export let showLogo: string = "show";
-
-  // variables
-  let animate;
-
-  //functions
-  if (pglogo === horlakzLogo) {
-    animate = "animate";
-  }
 </script>
 
 <!-- website head -->
@@ -43,27 +32,21 @@
   <meta name="twitter:site" content="@horlakzz" />
   <meta name="twitter:creator" content="@horlakzz" />
 
-  <!-- others -->
+  <!-- website logo -->
   <link rel="icon" href={horlakzLogo} />
+
+  <!-- website title -->
   <title>Horlakz</title>
 </svelte:head>
 
 <!-- main content  -->
-<main>
-  <div>
-    <Header {showLogo} />
-    <section class="container">
-      <aside>
+<Header />
+    <main>
         <slot />
-      </aside>
-      <!-- svelte-ignore a11y-img-redundant-alt -->
-      <img src={pglogo} alt="Display Image" class={animate} />
-    </section>
-    <Footer />
-  </div>
-</main>
+    </main>
+<Footer />
 
-<!-- style -->
+<!-- component style -->
 <style lang="scss">
   @use "../../assets/sass/main.scss" as *;
 

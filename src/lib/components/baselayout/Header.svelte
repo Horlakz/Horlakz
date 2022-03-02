@@ -1,23 +1,25 @@
 <!-- script -->
 <script lang="ts">
   import { Link } from "svelte-routing";
-  import logo from "../../../assets/images/H.png";
-
- export let showLogo: string = "showLogo";
 
 </script>
 
 <!-- main content -->
 <header>
-  <img src={logo} alt="logo" class={showLogo}>
+  <section>
+    <div class="tabs-div">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <h1><Link to='/'>horlakz</Link></h1>
+  </section>
   <nav>
     <ul>
-      <li><Link to="/">Home</Link></li>
-      <li><Link to="/about">About</Link></li>
-      <li><Link to="/works">Works</Link></li>
-      <li><Link to="/contact">Contact</Link></li>
+      <li><Link to="/">hello</Link></li>
+      <li><Link to="/about">about</Link></li>
+      <li><Link to="/works">works</Link></li>
     </ul>
-    <span>an</span>
   </nav>
 </header>
 
@@ -25,56 +27,52 @@
 <style lang="scss">
   @use "../../../assets/sass/main.scss" as *;
 
-  .active {
-    font-weight: 800;
-    color: black;
-  }
-
   header {
     display: flex;
-    place-content: space-between;
-    place-items: center;
-
-    img {
-      height: 3.25rem;
-      margin-left: 3rem;
-    }
-
-    ul {
-      display: none;
-    }
-  }
-  
-  @media (min-width: 468px) {
-    header {
-      padding: 0 2rem;
-
-      h1 {
-        font-size: 2rem;
-      }
+    flex-direction: column;
+    width: 100%;  
+    
+    section {
+      display: flex;
+      justify-content: center;
+      place-items: center;
+      position: relative;
       
-      ul {
+      .tabs-div {
         display: flex;
-        // display: none;
-        place-content: space-between;
-        
-        li {
-          text-transform: uppercase;
-          padding: 0 0.7rem;
-          font-size: 0.8rem;
+        position: absolute;
+        left: .3rem;
 
-          &::before {
-            content: '';
-            background: blue;
-            width: 1rem;
-            height: 1rem;
-            color: blue;
+        div {
+          height: .5rem;
+          width: .5rem;
+          border-radius: 999px;
+          margin: 0 .3rem;
+
+          &:first-child {
+            background: $pink-color;
+          }
+
+          &:nth-child(2) {
+            background-color: $yellow-color;
+          }
+
+          &:last-child {
+            background-color: $green-color;
           }
         }
+        
+        h1 {
+          text-align: center;
+        }
       }
+    }
 
-      span {
-        display: none;
+    nav ul {
+      display: flex;
+
+      li {
+        padding: .4rem 1rem;
       }
     }
   }

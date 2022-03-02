@@ -4,5 +4,5 @@
 </script>
 
 <BaseLayout>
-  <h1>this page doesn't exist, Go back <Link to="/" style="color: blue;">home</Link></h1>
+  <h1>this page doesn't exist, Go back <Link to="/">home</Link></h1>
 </BaseLayout>
