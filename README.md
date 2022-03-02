@@ -2,8 +2,8 @@
 
 <font size="4">  .frontend-developer {</font>
 
-        languages-are: HTML, CSS, Sass, JavaScript, TypeScript, React.js, Gatsby.js, Svelte;
-        website: url('horlakz.com');
+        skills-are: HTML5, CSS3, TailwindCSS, Sass, JavaScript, TypeScript, React.js, Svelte;
+        portfolio: url('horlakz.com');
 
 }
 
