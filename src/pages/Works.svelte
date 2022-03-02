@@ -1,8 +1,8 @@
 <script lang="ts">
-  import BaseLayout from "../lib/layouts/BaseLayout.svelte";
-  import WorkImg from "../assets/images/work-img.jpeg";
+    import BaseLayout from "../lib/layouts/BaseLayout.svelte";
+
 </script>
 
-<BaseLayout pglogo={WorkImg}>
-  <main><p>this is the page for displaying my works</p></main>
+<BaseLayout>
+ <h3>Hello World! this is the page to display works</h3>
 </BaseLayout>

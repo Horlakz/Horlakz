@@ -1,13 +1,18 @@
-// fonts
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Lobster&display=swap');
+// font links
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
 
 // variables
-$blue-color: #497cff;
-$purple-color2: #7226ff;
-$purple-color: #B07AE9;
-$aqua-color: #1ddef4;
+$orange-color: #8a6e35;
+$font-color: #6e767e;
+$bg-color: #0d1117;
+$font-aqua-color: #81cdff;
+$pink-color: #c5636c;
+$yellow-color: #ffe79d;
+$green-color: #b3d198;
+$purple-color: #6a5c76;
+$border-color: lighten($bg-color, 10%);
 
 // extends 
 .default-transition {
-    transition: 0.4s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
