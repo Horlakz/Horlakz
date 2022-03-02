@@ -1,8 +1,9 @@
 <script lang="ts">
     import BaseLayout from "../lib/layouts/BaseLayout.svelte";
 
+    let pageWorks = 'page-active'
 </script>
 
-<BaseLayout>
+<BaseLayout {pageWorks}>
  <h3>Hello World! this is the page to display works</h3>
 </BaseLayout>
