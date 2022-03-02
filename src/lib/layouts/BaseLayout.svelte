@@ -42,7 +42,9 @@
 <!-- main content  -->
 <Header />
     <main>
-        <slot />
+        <!-- <slot /> -->
+      Hey! This Website is in the build process and will soon be completed <br>
+      In the meantime you can contact me using the links Below
     </main>
 <Footer />
 
@@ -50,91 +52,13 @@
 <style lang="scss">
   @use "../../assets/sass/main.scss" as *;
 
-  $page-padding: 3.5rem;
-
   main {
-    padding: 1.52rem;
-    background: linear-gradient(
-      135deg,
-      rgb(253, 253, 253),
-      rgb(253, 253, 253),
-      rgb(228, 223, 223),
-      rgb(167, 165, 165)
-    );
-    height: 100vh;
-
-    div {
-
-      section {
-        display: flex;
-        flex-direction: column-reverse;
-        place-items: center;
-      }
-    }
-  }
-  
-  img {
-    max-height: 20rem;
-    width: inherit;
     display: flex;
-    background: transparent;
-    overflow-y: none;
-    z-index: 5;
-  }
-
-  @media (min-width: 560px) {
-    main {
-      padding: $page-padding;
-      background: linear-gradient(
-        135deg,
-        rgb(243, 243, 243),
-        rgb(228, 223, 223),
-        rgb(167, 165, 165)
-      );
-
-      div {
-        border: 2px solid black;
-        height: 100%;
-        border-radius: 2rem;
-        padding: 2rem;
-        position: relative;
-        background: white;
-
-        section {
-          flex-direction: row-reverse;
-          margin-top: 1.5rem;
-          max-height: inherit;
-          place-content: space-evenly;
-          // overflow-y: scroll;
-          
-          img {
-          }
-
-          aside {
-            max-height: inherit;
-            overflow-y: scroll;
-          }
-
-          .animate {
-            height: 3.5rem;
-            transform: translate(-12rem, -12rem);
-            animation: logoAnimate 1.5s ease-in forwards;
-          }
-        }
-      }
-    }
-  }
-
-  @keyframes logoAnimate {
-    50% {
-      transform: translate(-12rem, -12rem);
-      height: 3.25rem;
-    }
-
-    100% {
-      width: initial;
-      height: 20rem;
-      transform: translate(0, 0);
-    }
+    justify-content: center;
+    place-items: center;
+    text-align: center;
+    font-size: 1.4rem;
+    color: lighten($font-color, 40%);
+    padding-top: 3rem;
   }
 </style>

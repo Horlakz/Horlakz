@@ -36,19 +36,6 @@
     <a
       href="mailto:horlakz@protonmail.com"
       title="horlakz@protonmail.com"
-<<<<<<< HEAD
-      target="_blank">Email</a
-    >&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;<a
-      href="https://twitter.com/horlakzz"
-      title="@horlakzz"
-      target="_blank">Twitter</a
-    >&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;<a
-    href="https://www.youtube.com/channel/UCgI6MwUoyD5j_2Zc6rx4TBA"
-    title="YT-Horlakz"
-    target="_blank">Youtube</a
-  >
-  </p>
-=======
       target="_blank"
     >
       <Envelope />
@@ -61,7 +48,6 @@
     {hr}:{min}:{sec}
     {day}/{mon}/{year}
   </section>
->>>>>>> ab4a14f (re-formed the website)
 </footer>
 
 <style lang="scss">
@@ -70,7 +56,7 @@
   footer {
     position: absolute;
     bottom: 0;
-    padding: 2rem;
+    padding: .5rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -79,6 +65,17 @@
       text-decoration: underline;
       font-size: 0.8rem;
       padding: 0 .5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    footer {
+      flex-direction: column;
+      place-items: center;
+
+      section {
+        margin: .2rem 0;
+      }
     }
   }
 </style>
