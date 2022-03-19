@@ -121,6 +121,7 @@
             border-top: 3px solid $pink-color;
             border-bottom: 3px solid $bg-color;
             background-color: $bg-color;
+            color: $orange-color;
           }
         }
       }
