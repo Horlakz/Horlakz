@@ -1,9 +1,23 @@
 <script lang="ts">
-    import BaseLayout from "../lib/layouts/BaseLayout.svelte";
+  import BaseLayout from "../lib/layouts/BaseLayout.svelte";
 
-    let pageIndex:string = 'page-active'
+  let pageIndex: string = "page-active";
 </script>
 
 <BaseLayout {pageIndex}>
- <h3>Hello World! this is the homepage</h3>
+  <main>hello world</main>
 </BaseLayout>
+
+<style lang="scss">
+  @use "../assets/sass/main.scss" as *;
+
+  main {
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    text-align: center;
+    font-size: 1.4rem;
+    color: lighten($font-color, 40%);
+    padding-top: 3rem;
+  }
+</style>
