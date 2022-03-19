@@ -38,6 +38,10 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding-bottom: 1.2rem;
+    box-shadow: 0px 3px 6px -1px rgba(5, 5, 5, 0.8);
+    -webkit-box-shadow: 0px 3px 6px -1px rgba(5, 5, 5, 0.8);
+    -moz-box-shadow: 0px 3px 6px -1px rgba(5, 5, 5, 0.8);
 
     section {
       display: flex;
