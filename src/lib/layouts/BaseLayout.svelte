@@ -47,18 +47,3 @@
 <Header {pageIndex} {pageAbout} {pageWorks} />
 <slot />
 <Footer />
-
-<!-- component style -->
-<style lang="scss">
-  @use "../../assets/sass/main.scss" as *;
-
-  main {
-    display: flex;
-    justify-content: center;
-    place-items: center;
-    text-align: center;
-    font-size: 1.4rem;
-    color: lighten($font-color, 40%);
-    padding-top: 3rem;
-  }
-</style>
