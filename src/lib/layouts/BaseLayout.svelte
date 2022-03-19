@@ -45,9 +45,7 @@
 
 <!-- main content  -->
 <Header {pageIndex} {pageAbout} {pageWorks} />
-<main>
-  <slot />
-</main>
+<slot />
 <Footer />
 
 <!-- component style -->
