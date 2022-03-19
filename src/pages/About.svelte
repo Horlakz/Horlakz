@@ -5,5 +5,9 @@
 </script>
 
 <BaseLayout {pageAbout}>
-  <h3>Hello World! this is the About Page</h3>
+  <p>
+    Hey! This Page is still in the build process and will soon be completed <br
+    />
+    In the meantime you can contact me using the links Below
+  </p>
 </BaseLayout>
