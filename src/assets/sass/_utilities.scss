@@ -1,5 +1,5 @@
 // font links
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
 
 // variables
 $orange-color: #8a6e35;
@@ -10,9 +10,10 @@ $pink-color: #c5636c;
 $yellow-color: #ffe79d;
 $green-color: #b3d198;
 $purple-color: #6a5c76;
+$light-purple-color: #ceb2e9;
 $border-color: lighten($bg-color, 10%);
 
-// extends 
+// extends
 .default-transition {
-    transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
