@@ -60,6 +60,9 @@
       </div>
     </section>
   </main>
+  <small class="responsive-text">
+    for the best view switch to lanscape or desktop veiw
+  </small>
 </BaseLayout>
 
 <style lang="scss">
@@ -71,6 +74,7 @@
     place-content: center;
     color: lighten($font-color, 40%);
     padding: 0rem 14rem;
+    // width: 100%;
 
     section:first-child {
       display: grid;
@@ -193,9 +197,58 @@
     font-size: 0.85rem;
   }
 
+  .responsive-text {
+    display: none;
+  }
+
   @media (min-height: 500px) {
     main {
       height: 80vh;
+    }
+  }
+
+  @media (max-height: 650px) {
+    main {
+      // padding: 2rem 0;
+      height: 20rem;
+      overflow-y: scroll;
+    }
+  }
+
+  @media (max-width: 700px) {
+    main {
+      padding: 0 6rem;
+
+      section:first-child {
+        padding: 0;
+        margin: 0;
+
+        > * {
+          margin: 0;
+          padding: 0;
+          width: 100%;
+        }
+      }
+    }
+
+    .responsive-text {
+      display: block;
+    }
+
+    section:last-child .project-div {
+      display: none;
+    }
+  }
+
+  @media (max-width: 850px) {
+    main {
+      padding: 0 2rem;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    main {
+      padding: 0 6rem;
     }
   }
 </style>
