@@ -73,10 +73,14 @@
       padding: 0.4rem;
 
       &:first-child > * {
-        z-index: 10;
-        border-right: 1px solid $border-color;
         padding: 0.4rem 0.8rem;
       }
+    }
+  }
+
+  @media (min-width: 481px) {
+    section:first-child > * {
+      border-right: 1px solid $border-color;
     }
   }
 
@@ -87,6 +91,13 @@
 
       section {
         margin: 0.2rem 0;
+
+        &:first-child {
+          border-bottom: 1px solid $border-color;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+        }
       }
     }
   }
