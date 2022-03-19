@@ -4,10 +4,11 @@
   import Header from "../components/baselayout/Header.svelte";
   import Footer from "../components/baselayout/Footer.svelte";
   import horlakzLogo from "../../assets/images/H.png";
-  
+
   // props
-  export let pageIndex = '', pageAbout = '', pageWorks = ''
-  
+  export let pageIndex = "",
+    pageAbout = "",
+    pageWorks = "";
 </script>
 
 <!-- website head -->
@@ -44,11 +45,9 @@
 
 <!-- main content  -->
 <Header {pageIndex} {pageAbout} {pageWorks} />
-    <main>
-        <!-- <slot /> -->
-      Hey! This Website is in the build process and will soon be completed <br>
-      In the meantime you can contact me using the links Below
-    </main>
+<main>
+  <slot />
+</main>
 <Footer />
 
 <!-- component style -->
