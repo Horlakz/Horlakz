@@ -22,9 +22,9 @@
   </section>
   <nav>
     <ul>
-      <li class={pageIndex}><Link to="/">_hello</Link></li>
-      <li class={pageAbout}><Link to="/about">_about</Link></li>
-      <li class={pageWorks}><Link to="/works">_works</Link></li>
+      <li><Link to="/"><span class={pageIndex}>_hello</span></Link></li>
+      <li><Link to="/about"><span class={pageAbout}>_about</span></Link></li>
+      <li><Link to="/works"><span class={pageWorks}>_works</span></Link></li>
     </ul>
     <div />
   </nav>
@@ -93,30 +93,31 @@
     }
 
     nav {
+      display: flex;
+      width: 100%;
       border-top: 2px solid $border-color;
       border-bottom: 2px solid $border-color;
       background: darken($bg-color, 4%);
 
-    
       ul {
         display: flex;
-        // position: relative;
 
         li {
-          padding: 0.4rem 1.5rem;
           border-right: 2px solid $border-color;
-        }
+          width: 100%;
 
-        .page-active {
-          border-top: 3px solid $pink-color;
-          border-bottom: 4px solid $bg-color;
-          background-color: $bg-color;       
-          // position: absolute;
-          // top: 0;
-          // bottom: 0;
-          // left: 0;
-          // // right: 0;
-          z-index: 10;
+          span {
+            padding: 0.4rem 1.5rem;
+            width: 100%;
+          }
+
+          .page-active {
+            width: 100%;
+            padding: 0rem 1.5rem;
+            border-top: 3px solid $pink-color;
+            border-bottom: 3px solid $bg-color;
+            background-color: $bg-color;
+          }
         }
       }
     }
