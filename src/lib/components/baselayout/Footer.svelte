@@ -1,12 +1,16 @@
 <script lang="ts">
   // imports
-  import Envelope from '../svg/Envelope.svelte'
-  import Github from '../svg/Github.svelte';
-  import Twitter from '../svg/Twitter.svelte';
+  import Envelope from "../svg/Envelope.svelte";
+  import Github from "../svg/Github.svelte";
+  import Twitter from "../svg/Twitter.svelte";
 
   // variables
-  let  hr = 12, min  = 60, sec = 60, day = 30, mon = 12, year  = 2000
-
+  let hr: number = 12,
+    min: number = 59,
+    sec: number = 59,
+    day: number = 30,
+    mon: number = 12,
+    year: number = 2000;
 
   // functions
   const time = () => {
@@ -15,8 +19,8 @@
     hr = date.getHours();
     min = date.getMinutes();
     sec = date.getSeconds();
-    day = date.getDay();
-    mon = date.getMonth();
+    day = date.getDate();
+    mon = date.getMonth() + 1;
     year = date.getFullYear();
   };
 
@@ -25,7 +29,7 @@
 
 <footer>
   <section>
-    find_me_in:
+    <span>find_me_in:</span>
     <a
       href="https://github.com/horlakz"
       title="github.com/horlakz"
@@ -56,15 +60,23 @@
   footer {
     position: absolute;
     bottom: 0;
-    padding: .5rem;
+    // padding: 0.5rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    box-shadow: -1px -2px 4px -1px rgba(3, 3, 3, 0.86);
+    -webkit-box-shadow: -1px -2px 4px -1px rgba(3, 3, 3, 0.86);
+    -moz-box-shadow: -1px -2px 4px -1px rgba(3, 3, 3, 0.86);
+    border-top: 1px solid $border-color;
 
-    a {
-      text-decoration: underline;
-      font-size: 0.8rem;
-      padding: 0 .5rem;
+    section {
+      padding: 0.4rem;
+
+      &:first-child > * {
+        z-index: 10;
+        border-right: 1px solid $border-color;
+        padding: 0.4rem 0.8rem;
+      }
     }
   }
 
@@ -74,7 +86,7 @@
       place-items: center;
 
       section {
-        margin: .2rem 0;
+        margin: 0.2rem 0;
       }
     }
   }
