@@ -210,7 +210,7 @@
   @media (max-height: 650px) {
     main {
       // padding: 2rem 0;
-      height: 20rem;
+      // height: 20rem;
       overflow-y: scroll;
     }
   }
