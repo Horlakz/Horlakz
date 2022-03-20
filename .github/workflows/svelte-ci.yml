@@ -15,7 +15,7 @@ jobs:
       
       - name: Build Docker image and Static files
         run: |
-          docker-compose build
+          docker-compose build --force-rm
 
   deploy:
     runs-on: self-hosted
