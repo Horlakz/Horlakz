@@ -14,4 +14,4 @@ EXPOSE 5000
 
 RUN yarn build
 
-CMD ["yarn", "preview"]
+CMD ["yarn", "preview", "--host"]
