@@ -2,7 +2,7 @@ FROM node:18-alpine
 
 WORKDIR /app
 
-COPY package.json .
+COPY package.json vite.config.js svelte.config.js .
 
 RUN yarn
 
