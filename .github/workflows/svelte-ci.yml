@@ -1,17 +1,30 @@
-name: CI
+name: Deploy to Linode
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
-  build_x_deploy:
+  build:
     runs-on: self-hosted
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      
-      - name: Build Docker image and Static files
-        run: docker-compose up -d --force-recreate --build
+      - uses: actions/checkout@v2
+
+      - name: Build Docker images
+        run: |
+          docker build . -t horlakz:${{ github.sha }}
+
+  run:
+    runs-on: self-hosted
+
+    needs: build
+
+    steps:
+      - name: remove previous running images
+        run: docker rm --force horlakz
+
+      - name: Run Docker images
+        run: |
+          docker run -d -p 3400:5000 --name horlakz horlakz:${{ github.sha }}
