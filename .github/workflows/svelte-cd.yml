@@ -27,4 +27,4 @@ jobs:
 
       - name: Run Docker images
         run: |
-          docker run -d -p 3000:5000 --name horlakz horlakz:${{ github.sha }}
+          docker run -d --restart unless-stopped -p 3000:5000 --name horlakz horlakz:${{ github.sha }}
