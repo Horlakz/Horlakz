@@ -4,10 +4,11 @@
 </p>
 <hr/>
 <!-- I am currently freelancing and  pursuing B.Sc. in Statistics. I like to Code, Innovate and Experiment. I am an enthusiastic and a social person who loves to take up new challenges and learn new skills. I love meeting new people, exchanging ideas and spreading knowledge and positivity. -->
+<!-- I'm a Software Engineer based in Nigeria , As a passionate developer, I am passionate about open-source, coding, and software technologies.
+	Besides my job, I like to research on new tools and on read documentation. It helps me learn a lot and grow as a developer while also writing efficient code. -->
 
 <h4 align="center">
-I'm a Software Engineer based in Nigeria , As a passionate developer, I am passionate about open-source, coding, and software technologies.
-	Besides my job, I like to research on new tools and on read documentation. It helps me learn a lot and grow as a developer while also writing efficient code.
+I am currently freelancing and  pursuing B.Sc. in Statistics. I like to Code, Innovate and Experiment. I am an enthusiastic and a social person who loves to take up new challenges and learn new skills. I love meeting new people, exchanging ideas and spreading knowledge and positivity
 </h4>
 <br>
 <hr/>
